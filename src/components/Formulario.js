@@ -34,11 +34,8 @@ const handleChecked = (e) => {
 const handleSubmit = (e) => {
     alert("The form has been sent")
 } 
-    
-
-
     return (
-   
+   <>
          
             <form  type="submit" onSubmit={handleSubmit} >
                 <h1 className='p-2'>FORMULARIO</h1>
@@ -73,6 +70,9 @@ const handleSubmit = (e) => {
 <div className='d-flex justify-content-center'><input type="submit" style={boton} value="SUBMIT"/></div>
 
             </form>
+
+</>
+
     )
 }
 
