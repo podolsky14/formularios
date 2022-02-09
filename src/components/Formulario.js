@@ -3,7 +3,6 @@ import { useState } from 'react'
 import "../index.css"
 
 
-    
     const boton =  {
         width: "300px",
         backgroundColor: "blue",
@@ -34,6 +33,9 @@ const handleChecked = (e) => {
 const handleSubmit = (e) => {
     alert("The form has been sent")
 } 
+    
+
+
     return (
    <>
          
@@ -57,23 +59,19 @@ const handleSubmit = (e) => {
 <option name="german"  value="German">German</option>
 <option name="italian" value="Italian">Italian</option>
 </select><br/><br/>
-<div className='d-flex justify-content-start'>
-<label htmlFor="study" className='pe-4'>Studies completes:</label>
+<div className='d-flex justify-content-start check'>
+<label htmlFor="study" className='pe-4 studiescompletes'>Studies completes:</label>
 <label htmlFor="studies" >Primary school
 <input type="checkbox"  name="primary" id="primary" onChange={handleChecked} /></label>  &nbsp; &nbsp; &nbsp;
 <label htmlFor="studies">High school
 <input type="checkbox"  name="secundary" id="secundary" onChange={handleChecked} /></label>  &nbsp; &nbsp; &nbsp;
-<label htmlFor="studies" >University
-<input type="checkbox" name="university" id="university" onChange={handleChecked} /></label></div><br/>
+<label htmlFor="studies"><div className='uni1'>university</div>
+<div><input type="checkbox" name="university" id="university" onChange={handleChecked}/></div></label></div><br/>
 <input type="file" name="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} required/><br/><br/>
 <textarea name="textarea" cols="50" rows="10" placeholder='Write your message here ...' onChange={handleChange} required/><br/><br/>
 <div className='d-flex justify-content-center'><input type="submit" style={boton} value="SUBMIT"/></div>
 
             </form>
-
-</>
-
+            </>
     )
 }
-
-
